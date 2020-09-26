@@ -8,10 +8,15 @@ struct item {
 
 int int_list_sum(const struct item *lst)
 {
-	int sum = 0;
-	for(; lst; lst = lst->next)
-		sum += lst->data;
-	return sum;
+	return lst ? lst->data + int_list_sum(lst->next) : 0;
+}
+
+void delete_int_list(struct item *lst)
+{
+	if(lst) {
+		delete_int_list(lst->next);
+		free(lst);
+	}
 }
 
 struct item *fill_item_list(int *values, int size)
@@ -35,12 +40,7 @@ int main()
 			sizeof(initial_values)/sizeof(*initial_values));
 	begin = list;
 	sum = int_list_sum(list);
-	while(begin) {
-		struct item *tmp;
-		tmp = begin->next;
-		free(begin);
-		begin = tmp;
-	}
+	delete_int_list(begin);
 	result = printf("%d\n", sum);
 	if(result > 0)
 		return 0;
