@@ -1,0 +1,22 @@
+#include
+#include
+#include
+
+int
+{
+	if
+	{
+		printf("Please
+		return
+	}
+
+	FILE
+	f
+	if(!f)
+		perror(argv[1]);
+		exit(2);
+	}
+		printf("we
+	}
+	return
+}
