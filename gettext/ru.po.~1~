@@ -1,0 +1,27 @@
+# gettext/ru.po
+# Russian translation for the HelloBye program
+# No copyright is claimed!
+# Alexey Sodnomov, 2020
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: HelloBye 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-12 22:56+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alexey Sodnomov\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: hellobye.c:17
+#, c-format
+msgid "Hello, world!\n"
+msgstr "Здравстрвуй, мир!\n"
+
+#: hellobye.c:18
+#, c-format
+msgid "Good bye, world!\n"
+msgstr "До свидания, мир\n"
